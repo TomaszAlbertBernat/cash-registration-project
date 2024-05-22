@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #282c34;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+.input-group {
+    margin-bottom: 1em;
+}
+
+.input-cash {
+    margin-left: 0.5em;
+}
+
+.change-due {
+    margin-bottom: 1em;
+    font-size: 1.2em;
+}
+
+.btn-purchase {
+    padding: 0.5em 1em;
+    font-size: 1em;
+    color: #282c34;
+    background-color: #61dafb;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-purchase:hover {
+    background-color: #bbeeff;
+}
