@@ -89,7 +89,7 @@ const checkCashRegister = (price, cash, cid) => {
 
 const updateUI = (cashValue, price) => {
     if (cash === price) {
-        console.log("you didi dyou crazy son o =f a gun, you did it!")
+        console.log("you did it you crazy son o of a gun, you did it!")
     }
 }
 
