@@ -1,38 +1,81 @@
-body {
+/* Reset default styles for a cleaner base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 100vh; /* Fills viewport height */
+    padding: 2rem;
+  }
+  
+  /* Title styles */
+  h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  /* Input group styles */
+  .input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .input-group label {
+    flex: 1;
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .input-cash {
+    flex: 2;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  /* Change due styles */
+  .change-due {
+    background-color: #eee;
+    padding: 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    width: 100%;
+    max-width: 400px;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    min-height: 100vh;
-    margin: 0;
-    background-color: #282c34;
-    color: #ffffff;
-    font-family: Arial, sans-serif;
-}
-
-.input-group {
-    margin-bottom: 1em;
-}
-
-.input-cash {
-    margin-left: 0.5em;
-}
-
-.change-due {
-    margin-bottom: 1em;
-    font-size: 1.2em;
-}
-
-.btn-purchase {
-    padding: 0.5em 1em;
-    font-size: 1em;
-    color: #282c34;
-    background-color: #61dafb;
+    align-items: center;
+  }
+  
+  /* Button styles */
+  .btn-purchase {
+    background-color: #28a745;
+    color: white;
+    padding: 1rem 2rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
-}
-
-.btn-purchase:hover {
-    background-color: #bbeeff;
-}
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+  }
+  
+  .btn-purchase:hover {
+    background-color: #218c3d;
+  }
+  
