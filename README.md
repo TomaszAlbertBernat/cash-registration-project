@@ -49,5 +49,4 @@ This project was created as part of a training module on [FreeCodeCamp](https://
 This project is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for details.
 
 ---
-
-Feel free to contribute to this project by submitting issues or pull requests. Happy coding!
+Made by T-A-B
