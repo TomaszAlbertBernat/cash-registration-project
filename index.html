@@ -6,26 +6,65 @@
     <title>Cash Register</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-
 </head>
 <body>
-    <h1>Cash Register</h1>
+    <main role="main">
+        <h1>Cash Register</h1>
 
-    <div class="input-group">
-        <label for="cash">Cash from Customer:</label>
-        <input type="number" id="cash" class="input-cash">
-    </div>
+        <section class="calculator-section" aria-labelledby="calculator-heading">
+            <h2 id="calculator-heading" class="sr-only">Change Calculator</h2>
+            
+            <div class="price-display" aria-label="Item price">
+                <strong>Item Price: $<span id="price-display">1.87</span></strong>
+            </div>
 
-    <div id="change-due" class="change-due">
-        <!-- Change due will be displayed here -->
-    </div>
+            <div class="input-group">
+                <label for="cash">Cash from Customer:</label>
+                <input 
+                    type="number" 
+                    id="cash" 
+                    class="input-cash"
+                    step="0.01"
+                    min="0"
+                    placeholder="0.00"
+                    aria-describedby="cash-help"
+                    aria-required="true"
+                >
+                <div id="cash-help" class="sr-only">Enter the amount of cash received from customer</div>
+            </div>
 
-    <button id="purchase-btn" class="btn-purchase">Calculate Change</button>
+            <button 
+                id="purchase-btn" 
+                class="btn-purchase"
+                aria-describedby="button-help"
+            >
+                <span class="button-text">Calculate Change</span>
+                <span class="loading-spinner" aria-hidden="true"></span>
+            </button>
+            <div id="button-help" class="sr-only">Click to calculate change due or press Enter</div>
 
-    <div id="cash-in-drawer">
-        <!-- Cash in drawer will be displayed here -->
-    </div>
-    <div id="cash-drawer-display" class="cash-drawer-display"></div>
+            <div 
+                id="change-due" 
+                class="change-due"
+                role="status"
+                aria-live="polite"
+                aria-label="Change calculation result"
+            >
+                <p>Enter cash amount and click Calculate Change</p>
+            </div>
+        </section>
+
+        <section class="drawer-section" aria-labelledby="drawer-heading">
+            <h2 id="drawer-heading" class="sr-only">Cash Drawer Contents</h2>
+            <div 
+                id="cash-drawer-display" 
+                class="cash-drawer-display"
+                role="region"
+                aria-label="Current cash drawer contents"
+            ></div>
+        </section>
+    </main>
+
     <footer>Made by T-A-B</footer>
     <script src="script.js"></script>
 </body>
