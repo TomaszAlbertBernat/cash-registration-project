@@ -24,20 +24,29 @@ const formatResults = (status, change) => {
 };
 
 const checkCashRegister = () => {
-  if (Number(cash.value) < price) {
+  // Input validation
+  const cashValue = parseFloat(cash.value);
+  
+  if (isNaN(cashValue) || cashValue < 0) {
+    alert('Please enter a valid positive number for cash amount');
+    cash.value = '';
+    return;
+  }
+  
+  if (cashValue < price) {
     alert('Customer does not have enough money to purchase the item');
     cash.value = '';
     return;
   }
 
-  if (Number(cash.value) === price) {
+  if (cashValue === price) {
     displayChangeDue.innerHTML =
       '<p>No change due - customer paid with exact cash</p>';
     cash.value = '';
     return;
   }
 
-  let changeDue = Number(cash.value) - price;
+  let changeDue = cashValue - price;
   let reversedCid = [...cid].reverse();
   let denominations = [100, 20, 10, 5, 1, 0.25, 0.1, 0.05, 0.01];
   let result = { status: 'OPEN', change: [] };
@@ -56,7 +65,7 @@ const checkCashRegister = () => {
     result.status = 'CLOSED';
   }
 
-  for (let i = 0; i <= reversedCid.length; i++) {
+  for (let i = 0; i < reversedCid.length; i++) {
     if (changeDue >= denominations[i] && changeDue > 0) {
       let count = 0;
       let total = reversedCid[i][1];

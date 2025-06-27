@@ -79,3 +79,70 @@
     background-color: #218c3d;
   }
   
+  /* Cash drawer display styles */
+  .cash-drawer-display {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .cash-drawer-display p {
+    margin: 0.25rem 0;
+    color: #333;
+  }
+
+  .cash-drawer-display strong {
+    color: #28a745;
+  }
+
+  /* Footer styles */
+  footer {
+    margin-top: auto;
+    padding: 1rem;
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+    border-top: 1px solid #eee;
+    width: 100%;
+  }
+
+  /* Responsive design for smaller screens */
+  @media (max-width: 480px) {
+    body {
+      padding: 1rem;
+    }
+    
+    h1 {
+      font-size: 1.5rem;
+    }
+    
+    .input-group {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    
+    .input-group label {
+      margin-bottom: 0.5rem;
+    }
+    
+    .input-cash {
+      width: 100%;
+    }
+  }
+
+  /* Additional spacing */
+  #purchase-btn {
+    margin: 1rem 0;
+  }
+
+  /* Change due paragraph styling */
+  .change-due p {
+    margin: 0.25rem 0;
+    color: #333;
+  }
+  
